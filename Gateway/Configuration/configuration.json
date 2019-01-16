@@ -1,0 +1,31 @@
+﻿{
+  "ReRoutes": [
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/dashboard/{catchAll}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "4001"
+        }
+      ],
+
+      "UpstreamPathTemplate": "/api/dashboard/{catchAll}"
+    },
+    {
+      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/store",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "4002"
+        }
+      ],
+
+      "UpstreamPathTemplate": "/api/store"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "localhost:4000"
+  }
+}
